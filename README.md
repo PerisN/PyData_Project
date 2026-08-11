@@ -20,6 +20,7 @@ Key Project Goal:
 Primary research question - How do basic infrastructure deprivations (access to clean water, electricity and education) vary geographically across Kenya's 47 counties and which region exhibits the highest composite vulnerability?!
 
 Secondary Research questions:-
+
 A. County Rankings and Mapping (GeoPandas and Matplotlib)
 > - 1. Which counties fall into the highest and lowest quintiles of basic needs deprivation across Kenya?! (Answered by creating a top/bottom 10 ranking table and a color-coded 47-county map).
 
@@ -54,7 +55,7 @@ A. County Rankings and Mapping (GeoPandas and Matplotlib)
 ---
 
 ## Key Methodology and Pipeline.
-[1.] Data Cleaning - gathering county data from Kenya National Bureau of Statistics and using Pandas to clean up messy county names, fill in numbers and organize stats on water, electricity, sanitation and education for all 47 counties. 
-[2.] Composite Index Normalization - using NumPy to combine water access, electricity, sanitation and education into one clear score (eg., from 0.0 for low poverty to 1.0 for extreme poverty).
-[3.] Exploratory Data Analysis - using seaborn charts to answer key research questions.
-[4.] Choropleth Mapping and Spatial Analysis- using GeoPandas and Matplotlib to attach pandas calculations with geographic shapefiles to create an easy to read, color-coded map of Kenya.
+> - Data Cleaning - gathering county data from Kenya National Bureau of Statistics and using Pandas to clean up messy county names, fill in numbers and organize stats on water, electricity, sanitation and education for all 47 counties. 
+> - Composite Index Normalization - using NumPy to combine water access, electricity, sanitation and education into one clear score (eg., from 0.0 for low poverty to 1.0 for extreme poverty).
+> - Exploratory Data Analysis - using seaborn charts to answer key research questions.
+> - Choropleth Mapping and Spatial Analysis- using GeoPandas and Matplotlib to attach pandas calculations with geographic shapefiles to create an easy to read, color-coded map of Kenya.
