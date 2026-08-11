@@ -22,20 +22,20 @@ Primary research question - How do basic infrastructure deprivations (access to 
 Secondary Research questions:-
 
 A. County Rankings and Mapping (GeoPandas and Matplotlib)
-> - 1. Which counties fall into the highest and lowest quintiles of basic needs deprivation across Kenya?! (Answered by creating a top/bottom 10 ranking table and a color-coded 47-county map).
+> 1. Which counties fall into the highest and lowest quintiles of basic needs deprivation across Kenya?! (Answered by creating a top/bottom 10 ranking table and a color-coded 47-county map).
 
->   3. Are there distinct regional or spatial clusters (e.g., Northern/Arid counties vs. Central/Urban counties) where basic needs deprivations are consistently low?!   (Answered by observing regional patterns on the map, such as Northern/Arid counties vs. Urban/Central counties).
+> 2. Are there distinct regional or spatial clusters (e.g., Northern/Arid counties vs. Central/Urban counties) where basic needs deprivations are consistently low?!   (Answered by observing regional patterns on the map, such as Northern/Arid counties vs. Urban/Central counties).
 
-[-] B. Infrastructure Relationships (Seaborn)
-> - 3. How strongly correlated is electricity access with clean drinking water availability across Kenya's counties?!  (Answered using a correlation heatmap and scatter plot).
+B. Infrastructure Relationships (Seaborn)
+> 3. How strongly correlated is electricity access with clean drinking water availability across Kenya's counties?!  (Answered using a correlation heatmap and scatter plot).
 
->   5. Is there a significant relationship between household infrastructure access (water/power) and education completion rates at the county level?! (Answered using regression trendlines to see if lack of home utilities connects to lower school completion).
+> 4. Is there a significant relationship between household infrastructure access (water/power) and education completion rates at the county level?! (Answered using regression trendlines to see if lack of home utilities connects to lower school completion).
 
-[-] C. Multi-Metric vs. Single-Metric Comparison (NumPy and Pandas)
-> - 5. How does ranking counties using a multidimensional composite index like combining water, power and education differ from ranking them using single metric alone like electricity access only?!
+C. Multi-Metric vs. Single-Metric Comparison (NumPy and Pandas)
+> 5. How does ranking counties using a multidimensional composite index like combining water, power and education differ from ranking them using single metric alone like electricity access only?!
 (Answered by comparing rank differences between single-indicator lists and the combined index).
 
->   7. Which specific basic needs indicator contributes the highest weight to overall county vulnerability in the top 10 most deprived counties?!
+> 6. Which specific basic needs indicator contributes the highest weight to overall county vulnerability in the top 10 most deprived counties?!
 
 ---
 
