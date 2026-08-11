@@ -20,7 +20,7 @@ Key Project Goal:
 Primary research question - How do basic infrastructure deprivations (access to clean water, electricity and education) vary geographically across Kenya's 47 counties and which region exhibits the highest composite vulnerability?!
 
 Secondary Research questions:-
-[-] A. County Rankings and Mapping (GeoPandas and Matplotlib)
+> - A. County Rankings and Mapping (GeoPandas and Matplotlib)
 > - 1. Which counties fall into the highest and lowest quintiles of basic needs deprivation across Kenya?! (Answered by creating a top/bottom 10 ranking table and a color-coded 47-county map).
 
 >   3. Are there distinct regional or spatial clusters (e.g., Northern/Arid counties vs. Central/Urban counties) where basic needs deprivations are consistently low?!   (Answered by observing regional patterns on the map, such as Northern/Arid counties vs. Urban/Central counties).
