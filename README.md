@@ -3,8 +3,8 @@
 ---
 
 ## Project Description.
-National averages often mask regional inequalities. While Kenya has made progress in overall economic growth and energy expansion, access to essential public goods such as safe drinking water, grid electricity and basic education remains unevenly distributed across its 47 counties.
-This project evaluates subnational infrastructure deprivations using official statistics from the Kenya National Bureau of Statistics (KNBS) paired with geographic boundary datasets from Humanitarian Data Exchange (HDX). By combining Pandas, NumPy, Seaborn, GeoPandas, and Matplotlib. This analysis constructs a normalized Composite Basic Needs Index (CBNI) to identify spatial clusters of infrastructure vulnerability and evaluate relationships between household utilities and educational outcomes. 
+National averages often mask regional inequalities. While Kenya has made progress in overall economic growth and energy expansion, access to essential public goods such as safe drinking water, grid electricity and basic education remains unevenly distributed across its 47 counties. 
+This project evaluates how access to daily essentials, specifically clean water, electricity, and basic education varies across Kenya’s 47 counties. Instead of measuring poverty using only money or income-Income alone fails to capture the lived reality of poverty where a family crossing the official income threshold remains in severe hardship if they lack clean drinking water, access to electricity or basic education-, this project measures living conditions directly using official census and socio-economic datasets. By creating a multidimensional Basic Needs Deprivation Index, this project bridges statistical modeling with spatial visualization to uncover infrastructure gaps, highlight regional inequalities and pinpoint exactly where development resources are needed most.
 
 ---
 
@@ -12,7 +12,8 @@ This project evaluates subnational infrastructure deprivations using official st
 Evaluating poverty through income metrics alone fails to capture non-monetary deprivations. This project focuses on a simple but critical idea that poverty is more than just a lack of money. Looking at income only makes people miss the full picture while factors such as clean drinking water, no electricity, no schools for children and poor sanitation are still indicators of poverty. This is called Multidimensional Poverty-looking at multiple dimensions of a person's life at the same time-because a household might fall above the monetary poverty line yet lack clean water, sanitation, electricity, or access to schooling.
 
 Key Project Goal:
-> - Provide actionable insights by delivering clear, evidence-based recommendations that pinpoint which specific counties require priority resource allocation for basic infrastructure.
+> - Provide actionable insights by delivering clear, evidence-based recommendations that pinpoint which specific counties (especially the top 10 most deprived counties) require priority resource allocation for basic infrastructure.
+> - Demonstrates how household utilities directly correlate with educational retention, providing data-backed evidence for multi-sector infrastructure investments.
 
 --- 
 
