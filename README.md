@@ -9,7 +9,7 @@ This project evaluates how access to daily essentials, specifically clean water,
 ---
 
 ## Project Objectives.
-Evaluating poverty through income metrics alone fails to capture non-monetary deprivations. This project focuses on a simple but critical idea that poverty is more than just a lack of money. Looking at income only makes people miss the full picture while factors such as clean drinking water, no electricity, no schools for children and poor sanitation are still indicators of poverty. This is called Multidimensional Poverty-looking at multiple dimensions of a person's life at the same time-because a household might fall above the monetary poverty line yet lack clean water, sanitation, electricity, or access to schooling.
+Evaluating poverty through income metrics alone fails to capture non-monetary deprivations. This project focuses on a simple but critical idea that poverty is more than just a lack of money. Looking at income only makes people miss the full picture while factors such as clean drinking water, no electricity and no schools for children are still indicators of poverty. This is called Multidimensional Poverty-looking at multiple dimensions of a person's life at the same time-because a household might fall above the monetary poverty line yet lack clean water, electricity, or access to schooling.
 
 Key Project Goal:
 > - Provide actionable insights by delivering clear, evidence-based recommendations that pinpoint which specific counties (especially the top 10 most deprived counties) require priority resource allocation for basic infrastructure.
