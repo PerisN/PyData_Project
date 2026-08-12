@@ -14,7 +14,6 @@ Evaluating poverty through income metrics alone fails to capture non-monetary de
 
 Key Project Goal:
 > - Provide actionable insights by delivering clear, evidence-based recommendations that pinpoint which specific counties (especially the top 10 most deprived counties) require priority resource allocation for basic infrastructure.
-> - Demonstrates how household utilities directly correlate with educational retention, providing data-backed evidence for multi-sector infrastructure investments.
 
 --- 
 
