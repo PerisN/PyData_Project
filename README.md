@@ -49,8 +49,8 @@ C. Multi-Metric vs. Single-Metric Comparison (NumPy and Pandas)
 ---
 
 ## Dataset Sources.
-> - Kenya National Bureau of Standards (2019 Kenya Population and Housing Census Volume IV: Distribution of Population by Socio-Economic Characteristics). 
-> - HDX Kenya Boundaries Dataset - for geospatial boundaries.
+> - Kenya National Bureau of Standards (2019 Kenya Population and Housing Census Volume IV: Distribution of Population by Socio-Economic Characteristics): https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Volume-4-Distribution-of-Population-by-Socio-Economic-Characteristics.pdf
+> - HDX Kenya Boundaries Dataset: https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-kenya - for geospatial boundaries.
 
 ---
 
