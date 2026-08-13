@@ -62,8 +62,8 @@ Focuses on identifying cyclical spending behavior and months with high liquidity
 
 C. Long-Term Trends & Structural Shifts (Matplotlib)
 Focuses on macro-level shifts and milestone changes in Kenya's digital financial landscape.
-> - What are the 3-month and 12-month rolling averages for total monthly transaction value ($KSh\ billions$) and what do they reveal about the underlying long-term growth trajectory?!
-> - How strongly correlated are active agent counts with overall transaction volume and does an increase in physical agents directly drive higher transaction frequency?
+> - 5. What are the 3-month and 12-month rolling averages for total monthly transaction value ($KSh\ billions$) and what do they reveal about the underlying long-term growth trajectory?!
+> - 6. How strongly correlated are active agent counts with overall transaction volume and does an increase in physical agents directly drive higher transaction frequency?
 
 ---
 
