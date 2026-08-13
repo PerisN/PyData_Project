@@ -50,13 +50,20 @@ Build a 4-panel executive visual dashboard summarizing:
 ---
 
 ## Research Questions
-A. Adoption & Network Expansion (Pandas & Matplotlib).
+A. Adoption & Network Expansion (Pandas and NumPy).
+Focuses on how fast the mobile money ecosystem is expanding and whether infrastructure is keeping pace with user onboarding.
 > - 1. How has the ratio of active accounts per agent evolved, and is agent growth keeping pace with account registrations?!
-> - 2. What are the compound annual growth rates (CAGR) for total transaction values ($KSh\ billions$) over the last decade?!
+> - 2. What are the compound annual growth rates (CAGR) of total registered mobile money accounts versus active agent outlets over the dataset's timeframe?!
 
-B. Seasonality & Transaction Mechanics (NumPy & Seaborn).
+B. Seasonality, liquidity and volatility (Seaborn).
+Focuses on identifying cyclical spending behavior and months with high liquidity demands.
 > - 3. Which calendar months consistently exhibit peak transaction volumes and value spikes?!
-> - 4. What is the average value per individual transaction ($KSh\ value / volume$) and how has average basket size changed over time?!
+> - 4. How volatile are month-over-month (MoM) percentage changes in total transaction values, and during which historical periods did mobile money experience its highest volatility spikes?
+
+C. Long-Term Trends & Structural Shifts (Matplotlib)
+Focuses on macro-level shifts and milestone changes in Kenya's digital financial landscape.
+> - What are the 3-month and 12-month rolling averages for total monthly transaction value ($KSh\ billions$) and what do they reveal about the underlying long-term growth trajectory?!
+> - How strongly correlated are active agent counts with overall transaction volume and does an increase in physical agents directly drive higher transaction frequency?
 
 ---
 
