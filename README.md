@@ -1,61 +1,88 @@
-## Subnational Vulnerability and Multidimensional Poverty in Kenya: Mapping County-Level Inequality.
+## Analyzing Kenya's Mobile Money Growth and Transaction Volatility.
 
 ---
 
 ## Project Description.
-National averages often mask regional inequalities. While Kenya has made progress in overall economic growth and energy expansion, access to essential public goods such as safe drinking water, grid electricity and basic education remains unevenly distributed across its 47 counties. 
+Kenya is recognized globally as a leader in mobile money and digital financial inclusion. Platforms like M-Pesa and Airtel Money transformed the economy by allowing citizens to deposit, transfer and withdraw money using mobile phones. However, digital adoption is not static, it shifts over time due to economic factors, seasonal spending, policy changes and agent network expansion.
 
-This project evaluates how access to daily essentials, specifically clean water, electricity and basic education varies across Kenya’s 47 counties. Instead of measuring poverty using only money or income-Income alone fails to capture the lived reality of poverty where a family crossing the official income threshold remains in severe hardship if they lack clean drinking water, access to electricity or basic education-, this project measures living conditions directly using official census and socio-economic datasets. By creating a multidimensional Basic Needs Deprivation Index, this project bridges statistical modeling with spatial visualization to uncover infrastructure gaps, highlight regional inequalities and pinpoint exactly where development resources are needed most.
+This project is a time-series data analysis project that explores the evolution of digital finance in Kenya using official Central Bank monthly data.
+
+Instead of treating financial inclusion as a simple headline number e.g., x million users registered, this project analyzes how money actually flows through the system over time. This project breaks down, how fast the customer base and agent support networks have grown, how transaction volumes (number of payments) and transaction values (billion Ksh moved) behave month to month and where spikes and liquididty strains occur (such as holiday spending peaks vs. post-holiday contractions).
 
 ---
 
-## Project Objectives.
-Evaluating poverty through income metrics alone fails to capture non-monetary deprivations. This project focuses on a simple but critical idea that poverty is more than just a lack of money. Looking at income only makes people miss the full picture while factors such as clean drinking water, no electricity and no schools for children are still indicators of poverty. This is called Multidimensional Poverty-looking at multiple dimensions of a person's life at the same time-because a household might fall above the monetary poverty line yet lack clean water, electricity, or access to schooling.
+## Problem Statement.
+Many policy makers, fintech managers and economic analysts evaluate digital financial inclusion using flat, single-point metrics such as total registered users. This creates two major analytical blind spots: 
 
-Key Project Goal:
-> - Provide actionable insights by delivering clear, evidence-based recommendations that pinpoint which specific counties (especially the top 10 most deprived counties) require priority resource allocation for basic infrastructure.
+> - Active Usage vs. Dormant Accounts: A high number of registered accounts does not guarantee continuous economic utility if transaction velocity fluctuates heavily or drops off.
+> - Network Saturation & Liquidity Risks: As millions of users join mobile money networks, the physical agent network (cash-in/cash-out points) faces severe pressure. Without tracking agent density against transaction volumes, financial networks risk liquidity bottlenecks, especially during peak spending months.
+
+This project transforms static monthly CBK records into an interactive Python analytics pipeline. It calculates growth velocity, evaluates agent-to-user ratios and identifies seasonal spending cycles to provide actionable data on Kenya’s digital payments infrastructure.
+
 
 --- 
 
+## Project Objective.
+1. Data wrangling and time-series preparation (Pandas)
+> - Clean, format, and structure the raw CBK monthly payment dataset.
+> - Combine Year and Month string columns into a unified DatetimeIndex in Pandas to enable seamless temporal resampling and rolling calculations.
+
+2. Network growth and ratio analysis (Pandas & NumPy).
+
+Compute key structural ratios over time, including:
+> - Agent Density: Average number of active registered accounts served per physical agent outlet.
+> - Average Basket Size: Average value per transaction (Total KSh Value / Total Transaction Volume.
+Calculate Compound Annual Growth Rates (CAGR) and Year-over-Year (YoY) percentage changes for overall network expansion.
+
+3. Seasonality & Volatility Evaluation (Seaborn).
+> - Identify recurring monthly transaction patterns using Seaborn heatmaps and distribution plots.
+> - Determine which specific months experience the highest variance in liquidity demand (e.g., December spending vs. January/February drop-offs).
+
+4. Statistical Visualization & Dashboarding (Matplotlib)
+
+Build a 4-panel executive visual dashboard summarizing:
+> - Total Transaction Value ($KSh\ Billions$) over time
+> - Active Agents vs. Registered Accounts growth trendlines.
+> - Average Transaction Size ($KSh$) over time.
+> - Monthly seasonality heatmap.
+
+
+---
+
 ## Research Questions
-Primary research question - How do basic infrastructure deprivations (access to clean water, electricity and education) vary geographically across Kenya's 47 counties and which region exhibits the highest composite vulnerability?!
+A. Adoption & Network Expansion (Pandas & Matplotlib).
+> - 1. How has the ratio of active accounts per agent evolved, and is agent growth keeping pace with account registrations?!
+> - 2. What are the compound annual growth rates (CAGR) for total transaction values ($KSh\ billions$) over the last decade?!
 
-Secondary Research questions:-
-
-A. County Rankings and Mapping (GeoPandas and Matplotlib)
-> 1. Which counties fall into the highest and lowest quintiles of basic needs deprivation across Kenya?! 
-
-> 2. Are there distinct regional or spatial clusters (e.g., Northern/Arid counties vs. Central/Urban counties) where basic needs deprivations are consistently low?! 
-
-B. Infrastructure Relationships (Seaborn)
-> 3. How strongly correlated is electricity access with clean drinking water availability across Kenya's counties?!  
-
-> 4. Is there a significant relationship between household infrastructure access (water/power) and education completion rates at the county level?! 
-
-C. Multi-Metric vs. Single-Metric Comparison (NumPy and Pandas)
-> 5. How does ranking counties using a multidimensional composite index like combining water, power and education differ from ranking them using single metric alone like electricity access only?!
-
-> 6. Which specific basic needs indicator contributes the highest weight to overall county vulnerability in the top 10 most deprived counties?!
+B. Seasonality & Transaction Mechanics (NumPy & Seaborn).
+> - 3. Which calendar months consistently exhibit peak transaction volumes and value spikes?!
+> - 4. What is the average value per individual transaction ($KSh\ value / volume$) and how has average basket size changed over time?!
 
 ---
 
 ## Tech Stack and Libraries.
-> - Pandas: Merging county datasets and cleaning strings.
-> - NumPy: Normalizing metrics to build the index.
-> - Seaborn: Plotting correlations and distribution curves.
-> - GeoPandas: Creating county choropleth maps.
-> - Matplotlib: Arranging the final multi-chart dashboard.
+> - Pandas
+> - NumPy
+> - Seaborn
+> - Matplotlib
 
 ---
 
 ## Dataset Sources.
-> - Kenya National Bureau of Standards (2019 Kenya Population and Housing Census Volume IV: Distribution of Population by Socio-Economic Characteristics): https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Volume-4-Distribution-of-Population-by-Socio-Economic-Characteristics.pdf
-> - HDX Kenya Boundaries Dataset: https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-kenya - for geospatial boundaries.
+Kaggle - https://www.kaggle.com/datasets/collinsogombo/kenyas-mobile-money-payments-data?select=Mobile+Payments.csv
+
+Key Columns:-
+> - Year
+> - Month
+> - Active Agents
+> - Total Registered Mobile Money Accounts (Millions)
+> - Total Agent Cash in Cash Out (Volume Million)
+> - Total Agent Cash in Cash Out (Value KSh billions)
 
 ---
 
 ## Key Methodology and Pipeline.
-> - Data Cleaning - gathering county data from Kenya National Bureau of Statistics and using Pandas to clean up messy county names, fill in numbers and organize stats on water, electricity, sanitation and education for all 47 counties. 
-> - Composite Index Normalization - using NumPy to combine water access, electricity, sanitation and education into one clear score (eg., from 0.0 for low poverty to 1.0 for extreme poverty).
-> - Exploratory Data Analysis - using seaborn charts to answer key research questions.
-> - Choropleth Mapping and Spatial Analysis- using GeoPandas and Matplotlib to attach pandas calculations with geographic shapefiles to create an easy to read, color-coded map of Kenya.
+> - Pandas Data Transformation - combine year plus month into pd.DatetimeIndex and strip string formatting and handle NaNs.
+> - NumPy Feature Engineering - Calculate Avg Value per Txn = (Value / Volume) and Calculate YoY % Growth & Rolling Averages.
+> - Seaborn Statistical Plots - Monthly Heatmap (Year vs Month) and Regression/Trendline (Agents vs Accounts).
+> - Matplotlib Dashboard - Export 4-panel executive chart.
