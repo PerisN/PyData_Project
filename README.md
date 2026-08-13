@@ -7,7 +7,9 @@ Kenya is recognized globally as a leader in mobile money and digital financial i
 
 This project is a time-series data analysis project that explores the evolution of digital finance in Kenya using official Central Bank monthly data.
 
-Instead of treating financial inclusion as a simple headline number e.g., x million users registered, this project analyzes how money actually flows through the system over time. This project breaks down, how fast the customer base and agent support networks have grown, how transaction volumes (number of payments) and transaction values (billion Ksh moved) behave month to month and where spikes and liquididty strains occur (such as holiday spending peaks vs. post-holiday contractions).
+Instead of treating financial inclusion as a simple headline number that says '50 million users registered', this project analyzes how money actually flows through the system over time. This project breaks down how fast the customer base and agent support networks have grown, how transaction volumes (number of payments) and transaction values (billion KSh moved) behave month to month and where spikes and liquidity strains occur (such as holiday spending peaks vs. post-holiday contractions).
+
+In short, My project looks at Kenya's mobile money system over time to see how people actually spend money, when the busiest months are and if there are enough agents to help everyone.
 
 ---
 
