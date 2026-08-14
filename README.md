@@ -96,37 +96,8 @@ Key Columns:-
 ---
 
 ## Key Methodology and Pipeline.
-┌─────────────────────────────────────────────────────────┐
-│              1. DATA INGESTION & AUDITING               │
-│      • Load raw CBK CSV file via Pandas                 │
-│      • Inspect schema types & audit missing values      │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│             2. PREPROCESSING & STRUCTURING              │
-│      • Clean currency symbols & numeric strings          │
-│      • Construct unified DatetimeIndex (Year + Month)   │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│            3. FEATURE ENGINEERING & MATH                │
-│      • Calculate Average Basket Size (Value / Volume)   │
-│      • Compute User-to-Agent Ratio (Accounts / Agents)  │
-│      • Deriving YoY Growth & 12-Month Moving Averages   │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│        4. SEASONALITY & VOLATILITY MODELING             │
-│      • Unstack time-series into 2D Pivot Table          │
-│      • Compute Month-over-Month (MoM) variance          │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│            5. VISUAL DASHBOARDING ENGINE                │
-│      • Render Seaborn Heatmaps & Trendlines             │
-│      • Assemble 4-Panel Matplotlib Executive Layout     │
-└─────────────────────────────────────────────────────────┘
+1. Data Ingestion and Schema Auditing - Load the Central Bank of Kenya (CBK) time-series CSV file.
+2. Preprocessing and Time-Series Structuring - Clean raw strings and convert the flat dataset into a structured time-series object.
+3. Feature Engineering and Derived Metrics - Construct custom mathematical ratios to reveal operational realities behind the numbers.
+4. Seasonality and Volatility Modeling - Evaluate monthly cash flow cycles and structural variance.
+5. Visual Dashboard Assembly - Synthesize outputs into an executive 4-panel visual dashboard.
