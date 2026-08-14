@@ -7,7 +7,7 @@ Kenya is recognized globally as a leader in mobile money and digital financial i
 
  However, digital adoption is not static, it shifts over time due to economic factors, seasonal spending cycles, policy changes and physical agent network expansion. Digital finance in Kenya is no longer a single-provider story. 
 
-This project analyzes national-level monthly data from the Central Bank of Kenya (CBK) to evaluate the entire ecosystem of mobile wallets. It tracks how total account registrations, active cash-in/cash-out agent networks, total transaction counts and total monetary value ($KSh\ billions$) have expanded and fluctuated over time.
+This project deliberately focuses on a Macroeconomics Sector Analysis, it analyzes national-level monthly data from the Central Bank of Kenya (CBK) to evaluate the entire ecosystem of mobile wallets. It tracks how total account registrations, active cash-in/cash-out agent networks, total transaction counts and total monetary value ($KSh\ billions$) have expanded and fluctuated over time.
 
 In short, My project looks at Kenya's mobile money system over time to see how people actually spend money, when the busiest months are and if there are enough agents to help everyone.
 
