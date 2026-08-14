@@ -1,71 +1,76 @@
-## Analyzing Kenya's Mobile Money Growth and Transaction Volatility.
+## Analyzing Growth Velocity, Market Shifts and Transaction Patterns Across Kenya’s Mobile Money Sector.
 
 ---
 
 ## Project Description.
-Kenya is recognized globally as a leader in mobile money and digital financial inclusion. Platforms like M-Pesa and Airtel Money transformed the economy by allowing citizens to deposit, transfer and withdraw money using mobile phones. However, digital adoption is not static, it shifts over time due to economic factors, seasonal spending, policy changes and agent network expansion.
+Kenya is recognized globally as a leader in mobile money and digital financial inclusion. While Safaricom's M-Pesa historically led the market, competitor platforms such as Airtel Money, Telkom T-kash, Equitel and bank-backed wallets like NCBA Loop and Absa Timiza have captured growing market share by allowing citizens to deposit, transfer and withdraw money using mobile phones.
 
-This project is a time-series data analysis project that explores the evolution of digital finance in Kenya using official Central Bank monthly data.
+ However, digital adoption is not static, it shifts over time due to economic factors, seasonal spending cycles, policy changes and physical agent network expansion. Digital finance in Kenya is no longer a single-provider story. 
 
-Instead of treating financial inclusion as a simple headline number that says '50 million users registered', this project analyzes how money actually flows through the system over time. This project breaks down how fast the customer base and agent support networks have grown, how transaction volumes (number of payments) and transaction values (billion KSh moved) behave month to month and where spikes and liquidity strains occur (such as holiday spending peaks vs. post-holiday contractions).
+This project analyzes national-level monthly data from the Central Bank of Kenya (CBK) to evaluate the entire ecosystem of mobile wallets. It tracks how total account registrations, active cash-in/cash-out agent networks, total transaction counts and total monetary value ($KSh\ billions$) have expanded and fluctuated over time.
 
 In short, My project looks at Kenya's mobile money system over time to see how people actually spend money, when the busiest months are and if there are enough agents to help everyone.
 
 ---
 
 ## Problem Statement.
-Many policy makers, fintech managers and economic analysts evaluate digital financial inclusion using flat, single-point metrics such as total registered users. This creates two major analytical blind spots: 
+Many policy makers, fintech managers and economic analysts evaluate digital financial inclusion using static headline metrics like total registered accounts. However, relying solely on registration numbers creates two critical analytical blind spots:
 
 > - Active Usage vs. Dormant Accounts: A high number of registered accounts does not guarantee continuous economic utility if transaction velocity fluctuates heavily or drops off.
-> - Network Saturation & Liquidity Risks: As millions of users join mobile money networks, the physical agent network (cash-in/cash-out points) faces severe pressure. Without tracking agent density against transaction volumes, financial networks risk liquidity bottlenecks, especially during peak spending months.
 
-This project transforms static monthly CBK records into an interactive Python analytics pipeline. It calculates growth velocity, evaluates agent-to-user ratios and identifies seasonal spending cycles to provide actionable data on Kenya’s digital payments infrastructure.
+> - Network Capacity and Liquidity Risks: As user onboarding scales across mobile money networks, the supporting agent infrastructure faces operational pressure. Without evaluating agent density against transaction velocity, networks risk severe cash liquidity bottlenecks, particularly during peak spending seasons.
 
+To address these limitations, this project converts raw, monthly Central Bank of Kenya (CBK) time-series data into an interactive Python analytics pipeline. By modeling growth velocity, calculating agent-to-user ratios and identifying seasonal liquidity cycles, it provides data-driven insights into Kenya’s digital payments infrastructure.
 
 --- 
 
 ## Project Objective.
-1. Data wrangling and time-series preparation (Pandas)
+1. National Data Cleaning and Resampling (Pandas).
 > - Clean, format, and structure the raw CBK monthly payment dataset.
 > - Combine Year and Month string columns into a unified DatetimeIndex in Pandas to enable seamless temporal resampling and rolling calculations.
 
-2. Network growth and ratio analysis (Pandas & NumPy).
+2. Agent Network Efficiency & Basket Size Math (NumPy).
+Calculate national-level indicators over time:
+> - User-to-Agent Density Ratio: Total National Mobile Accounts/Total Active Agent Out.
+> - National Average Basket Size: Total Value Moved (KSh) / Total Transaction Count.
 
-Compute key structural ratios over time, including:
-> - Agent Density: Average number of active registered accounts served per physical agent outlet.
-> - Average Basket Size: Average value per transaction (Total KSh Value / Total Transaction Volume.
-Calculate Compound Annual Growth Rates (CAGR) and Year-over-Year (YoY) percentage changes for overall network expansion.
-
-3. Seasonality & Volatility Evaluation (Seaborn).
-> - Identify recurring monthly transaction patterns using Seaborn heatmaps and distribution plots.
-> - Determine which specific months experience the highest variance in liquidity demand (e.g., December spending vs. January/February drop-offs).
+3. Industrial Seasonality & Volatility Mapping (Seaborn).
+> - Cyclical Payment Heatmaps: Construct multi-year Seaborn heatmaps to identify recurring monthly transaction spikes and spending contractions.
+> - Liquidity Variance Analysis: Measure month-over-month (MoM) volatility in payment values (KSh\ Billions) to highlight seasonal liquidity strain—contrasting high-volume periods (e.g., December holiday retail and January school fee payments) against post-holiday usage pullbacks.
 
 4. Statistical Visualization & Dashboarding (Matplotlib)
-
-Build a 4-panel executive visual dashboard summarizing:
-> - Total Transaction Value ($KSh\ Billions$) over time
-> - Active Agents vs. Registered Accounts growth trendlines.
-> - Average Transaction Size ($KSh$) over time.
-> - Monthly seasonality heatmap.
+Assemble a publication-ready, 4-panel visual dashboard summarizing key macro trends:
+> - Transaction Volume and Value: Dual-axis time-series tracking overall throughput in KSh\ Billions alongside total monthly transaction counts.
+> - Network Scale Trends: Comparative trajectory plotting the expansion of Active Agent Outlets against Total Registered Accounts.
+> - Average Basket Size: Historical trendline tracking the average value per individual transaction (KSh) over time.
+> - Monthly Seasonality Heatmap: Pivot-table visual matrix displaying monthly payment intensity across calendar years.
 
 
 ---
 
 ## Research Questions
-A. Adoption & Network Expansion (Pandas and NumPy).
-Focuses on how fast the mobile money ecosystem is expanding and whether infrastructure is keeping pace with user onboarding.
-> - 1. How has the ratio of active accounts per agent evolved, and is agent growth keeping pace with account registrations?!
-> - 2. What are the compound annual growth rates (CAGR) of total registered mobile money accounts versus active agent outlets over the dataset's timeframe?!
+A. Ecosystem Expansion & Network Capacity (Pandas and NumPy)
+Focuses on macro growth velocity and whether the physical agent infrastructure is keeping up with user onboarding.
 
-B. Seasonality, liquidity and volatility (Seaborn).
-Focuses on identifying cyclical spending behavior and months with high liquidity demands.
-> - 3. Which calendar months consistently exhibit peak transaction volumes and value spikes?!
-> - 4. How volatile are month-over-month (MoM) percentage changes in total transaction values, and during which historical periods did mobile money experience its highest volatility spikes?
+> - What is the long-term Compound Annual Growth Rate (CAGR) of total registered mobile money accounts compared to physical active agents across Kenya's digital wallet sector?!
 
-C. Long-Term Trends & Structural Shifts (Matplotlib)
-Focuses on macro-level shifts and milestone changes in Kenya's digital financial landscape.
-> - 5. What are the 3-month and 12-month rolling averages for total monthly transaction value ($KSh\ billions$) and what do they reveal about the underlying long-term growth trajectory?!
-> - 6. How strongly correlated are active agent counts with overall transaction volume and does an increase in physical agents directly drive higher transaction frequency?
+> - How has the User-to-Agent Density Ratio (Total Accounts / Active Agents) evolved over time, and does the data signal physical agent network saturation?
+
+> - How has the Average Basket Size (Total Value in KSh / Total Transaction Volume) shifted over time, and is transaction value expanding faster than transaction count?
+
+B. Industry Seasonality & Liquidity Volatility (Seaborn)
+Focuses on cyclical payment patterns, month-over-month shifts, and seasonal liquidity demand spikes.
+
+> - Which calendar months consistently exhibit peak transaction volumes and values across different years?! 
+
+> - How volatile are month-over-month (MoM) percentage changes in national transaction values (KSh\ Billions), and during which historical periods did the sector experience its sharpest swings?!
+
+C. Long-Term Velocity & Macro Shifts (Matplotlib)
+Focuses on rolling trendlines and correlations between ecosystem infrastructure variables.
+
+> - What do 3-month and 12-month rolling averages reveal about the underlying long-term growth trajectory of Kenya's mobile payments throughput?!
+
+> - How strongly correlated are active agent counts with overall transaction volume, and does expanding agent access directly correlate with higher transaction frequency?!
 
 ---
 
@@ -91,7 +96,37 @@ Key Columns:-
 ---
 
 ## Key Methodology and Pipeline.
-> - Pandas Data Transformation - combine year plus month into pd.DatetimeIndex and strip string formatting and handle NaNs.
-> - NumPy Feature Engineering - Calculate Avg Value per Txn = (Value / Volume) and Calculate YoY % Growth & Rolling Averages.
-> - Seaborn Statistical Plots - Monthly Heatmap (Year vs Month) and Regression/Trendline (Agents vs Accounts).
-> - Matplotlib Dashboard - Export 4-panel executive chart.
+┌─────────────────────────────────────────────────────────┐
+│              1. DATA INGESTION & AUDITING               │
+│      • Load raw CBK CSV file via Pandas                 │
+│      • Inspect schema types & audit missing values      │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│             2. PREPROCESSING & STRUCTURING              │
+│      • Clean currency symbols & numeric strings          │
+│      • Construct unified DatetimeIndex (Year + Month)   │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│            3. FEATURE ENGINEERING & MATH                │
+│      • Calculate Average Basket Size (Value / Volume)   │
+│      • Compute User-to-Agent Ratio (Accounts / Agents)  │
+│      • Deriving YoY Growth & 12-Month Moving Averages   │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│        4. SEASONALITY & VOLATILITY MODELING             │
+│      • Unstack time-series into 2D Pivot Table          │
+│      • Compute Month-over-Month (MoM) variance          │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│            5. VISUAL DASHBOARDING ENGINE                │
+│      • Render Seaborn Heatmaps & Trendlines             │
+│      • Assemble 4-Panel Matplotlib Executive Layout     │
+└─────────────────────────────────────────────────────────┘
